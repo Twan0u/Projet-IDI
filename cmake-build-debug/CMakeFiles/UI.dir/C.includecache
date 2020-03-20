@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UI.c
+stdio.h
+-
+classificationStatistics.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h
+interfacelib.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h
+
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.c
+classificationStatistics.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h
+dao.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
+
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h
+dao.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
+
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.c
+dao.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
+stdio.h
+-
+
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
+stdio.h
+-
+
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.c
+interfacelib.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h
+stdio.h
+-
+
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h
+stdio.h
+-
+
