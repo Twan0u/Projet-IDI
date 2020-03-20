@@ -9,5 +9,5 @@ Ce repository contient le code pour le projet du cours de Programmation Numériq
 
 [![GitHub tag](https://img.shields.io/badge/Version-0.0.1-blue)]()
 
-[![Maintenance](https://img.shields.io/badge/Test Pass-0%-red.svg)]()
+[![Github tag2](https://img.shields.io/badge/Test_Pass-0%-red.svg)]()
 
