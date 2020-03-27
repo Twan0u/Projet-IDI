@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+#clion
+.idea/*
+
 # Object files
 #*.o # because needed for the project
 *.ko
