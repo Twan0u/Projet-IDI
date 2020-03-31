@@ -20,6 +20,7 @@ int main() {
             break;
         case 2:
             printf("Vous avez sélectionné 2.\n");
+            test_classificationStatistics();
             break;
         default:
             printf("Choix incorrect\n");
