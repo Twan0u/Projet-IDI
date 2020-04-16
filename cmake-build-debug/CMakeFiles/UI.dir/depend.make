@@ -6,6 +6,10 @@ CMakeFiles/UI.dir/UI.c.o: ../classificationStatistics.h
 CMakeFiles/UI.dir/UI.c.o: ../dao.h
 CMakeFiles/UI.dir/UI.c.o: ../interfacelib.h
 
+CMakeFiles/UI.dir/UnitTest.c.o: ../UnitTest.c
+CMakeFiles/UI.dir/UnitTest.c.o: ../UnitTest.h
+
+CMakeFiles/UI.dir/classificationStatistics.c.o: ../UnitTest.h
 CMakeFiles/UI.dir/classificationStatistics.c.o: ../classificationStatistics.c
 CMakeFiles/UI.dir/classificationStatistics.c.o: ../classificationStatistics.h
 CMakeFiles/UI.dir/classificationStatistics.c.o: ../dao.h

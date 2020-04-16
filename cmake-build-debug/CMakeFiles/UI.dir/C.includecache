@@ -14,19 +14,29 @@ classificationStatistics.h
 interfacelib.h
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h
 
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.c
+UnitTest.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.h
+stdbool.h
+-
+stdio.h
+-
+
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.h
+stdbool.h
+-
+
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.c
 classificationStatistics.h
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h
 dao.h
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
-string.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/string.h
+UnitTest.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.h
 
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h
 dao.h
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
-string.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/string.h
 
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.c
 dao.h

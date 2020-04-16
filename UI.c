@@ -19,13 +19,17 @@ int main() {
             printf("Vous avez sélectionné 1.\n");
             break;
         case 2:
-            printf("Vous avez sélectionné 2.\n");
-            test_classificationStatistics();
+            printf("Début des tests\n");
+            line();
+                test_classificationStatistics();
+            line();
+                test_dao();
+            line();
             break;
         default:
             printf("Choix incorrect\n");
     }
-    test_dao();
+
     return 0;
 }
 

@@ -5,5 +5,5 @@
 #include "dao.h"
 #include <stdio.h>
 void test(){
-    printf("DAO Connecté");
+    printf("DAO Connecté\n");
 }

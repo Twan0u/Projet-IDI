@@ -3,4 +3,4 @@ project(IDI C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(UI UI.c classificationStatistics.c classificationStatistics.h interfacelib.c interfacelib.h dao.c dao.h)
+add_executable(UI UI.c classificationStatistics.c classificationStatistics.h interfacelib.c interfacelib.h dao.c dao.h UnitTest.c UnitTest.h)

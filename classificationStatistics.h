@@ -5,7 +5,6 @@
 #ifndef IDI_CLASSIFICATIONSTATISTICS_H
 #define IDI_CLASSIFICATIONSTATISTICS_H
 #include "dao.h"
-#include "string.h"
 
 void test_dao();
 

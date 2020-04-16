@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/UI.dir/classificationStatistics.c.o"
   "CMakeFiles/UI.dir/interfacelib.c.o"
   "CMakeFiles/UI.dir/dao.c.o"
+  "CMakeFiles/UI.dir/UnitTest.c.o"
   "UI.pdb"
   "UI"
 )

@@ -4,11 +4,13 @@
 
 #include "classificationStatistics.h"
 #include "dao.h"
-#include "string.h"
+#include "UnitTest.h"
 
 /* Contiens un tableau de classes et la taille de ce tableau
+ *
  * vector est un tableau contenant des entiers
  * size est la taille de ce tableau
+ *
  */
 typedef struct Classes Classes;
 struct Classes {
@@ -25,7 +27,31 @@ Classes researchClasses(int *realClasses){
      return output;
 }
 
+/* retourne le calcul d'un pourcentage de ( sum / total ) * 100
+ *
+ * @param sum est le nombre de réalisation
+ * @param total est le nombre d'essais
+ *
+ * @return un pourcentage. Si sum est suppérieur à total, retourne 100.
+ */
+double percentage(int sum, int total){
+    if (sum < total){
+        return ((double)sum/(double)total)*100;
+    }else{
+        return 100;
+    }
+}
 
+/* Test de la fonction de pourcentage
+ */
+int test_percentage(void){
+    int error_counter = 0;
+    int* error_counter_ptr= &error_counter;
+    error_assert(percentage(3300,10000) == 33.00,"simple de pourcentage",error_counter_ptr);
+    error_assert(percentage(3333,10000) == 33.33,"pourcentage avec 2 nombres derrière la virgule ",error_counter_ptr);
+    error_assert(percentage(1000,10) == 100,"sum suppérieur à total",error_counter_ptr);
+    return error_counter;
+}
 
 /*	Compare 2 entiers et vérifie que ceux-ci sont identiques
  *
@@ -38,27 +64,20 @@ int compare(int firstElement, int secondElement){
     return firstElement-secondElement;
 }
 
-int error_msg(char *message,int errorCounter){
-    printf("\t\t* %s\n",message);
-    return errorCounter++;
-}
-
-
-/* Test écrit pour la fonction compare
- *
+/* Test sur la fonction compare()
  */
 int test_compare(void){
     int error_counter = 0;
-    if (compare(1,1) != 0){error_counter=error_msg("Comparaison de 2 nombres identiques",error_counter);}
-    if (compare(1,2) == 0){error_counter=error_msg("Comparaison de 2 nombres différents",error_counter);}
-    if (compare(0,0) != 0){error_counter=error_msg("Comparaison de 2 zeros",error_counter);}
-    if (compare(1,0) == 0){error_counter=error_msg("Comparaison avec un zero",error_counter);}
-    if (compare(-5,-5) != 0){error_counter=error_msg("Comparaison entre 2 nombres négatifs identiques",error_counter);}
-    if (compare(-4,8) == 0){error_counter=error_msg("Comparaison entre 2 nombres différents dont un négatif",error_counter);}
-    if (compare(-4,-16) == 0){error_counter=error_msg("Comparaison entre 2 nombres négatif différents",error_counter);}
+    int* error_counter_ptr= &error_counter;
+    error_assert(compare(1,1) == 0,"Comparaison de 2 nombres identiques",error_counter_ptr);
+    error_assert(compare(1,2) != 0,"Comparaison de 2 nombres différents",error_counter_ptr);
+    error_assert(compare(0,0) == 0,"Comparaison entre 2 zeros",error_counter_ptr);
+    error_assert(compare(1,0)!=0,"Comparaison entre un nombre non nul et zero",error_counter_ptr);
+    error_assert(compare(-5,-5)==0,"Comparaison de 2 nombres identiques négatifs",error_counter_ptr);
+    error_assert(compare(-4,8)!=0,"Comparaison entre 2 nombres différents dont un négatif",error_counter_ptr);
+    error_assert(compare(-4,-16)!=0,"Comparaison entre 2 nombres négatif différents",error_counter_ptr);
     return error_counter;
 }
-
 
 /*	Compare 2 vecteurs entre eux et retourne un tableau de taille identique au premier vecteur mis en paramètre. Si l'élément du tableau vaut 0, cela signifie que les 2 vecteurs ont le même contenu.
  *
@@ -107,10 +126,8 @@ void test_dao(){
 
 void test_classificationStatistics(void){
     int error_count;//variable temporaire utilisée
-    printf("\n_____________________________________________________\n");
     printf("Début - Test de classification Statistics :\n");
-        printf("\tDébut - Test de la fonction compare :\n");
-        printf("\tFin - Test de la fonction compare : %d erreurs\n",test_compare());
+        printf("\tx Fonction compare : %d erreurs\n",test_compare());
+        printf("\tx Fonction percentage : %d erreurs\n",test_percentage());
     printf("Fin - Test de classification Statistics :\n");
-    printf("_____________________________________________________\n");
 }

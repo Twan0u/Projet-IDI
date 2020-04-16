@@ -81,6 +81,12 @@
 		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UI.c">
 			<Option target="UI"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.c">
+			<Option target="UI"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.h">
+			<Option target="UI"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.c">
 			<Option target="UI"/>
 		</Unit>

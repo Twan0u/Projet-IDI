@@ -150,6 +150,33 @@ UI.c.s:
 	$(MAKE) -f CMakeFiles/UI.dir/build.make CMakeFiles/UI.dir/UI.c.s
 .PHONY : UI.c.s
 
+UnitTest.o: UnitTest.c.o
+
+.PHONY : UnitTest.o
+
+# target to build an object file
+UnitTest.c.o:
+	$(MAKE) -f CMakeFiles/UI.dir/build.make CMakeFiles/UI.dir/UnitTest.c.o
+.PHONY : UnitTest.c.o
+
+UnitTest.i: UnitTest.c.i
+
+.PHONY : UnitTest.i
+
+# target to preprocess a source file
+UnitTest.c.i:
+	$(MAKE) -f CMakeFiles/UI.dir/build.make CMakeFiles/UI.dir/UnitTest.c.i
+.PHONY : UnitTest.c.i
+
+UnitTest.s: UnitTest.c.s
+
+.PHONY : UnitTest.s
+
+# target to generate assembly for a file
+UnitTest.c.s:
+	$(MAKE) -f CMakeFiles/UI.dir/build.make CMakeFiles/UI.dir/UnitTest.c.s
+.PHONY : UnitTest.c.s
+
 classificationStatistics.o: classificationStatistics.c.o
 
 .PHONY : classificationStatistics.o
@@ -243,6 +270,9 @@ help:
 	@echo "... UI.o"
 	@echo "... UI.i"
 	@echo "... UI.s"
+	@echo "... UnitTest.o"
+	@echo "... UnitTest.i"
+	@echo "... UnitTest.s"
 	@echo "... classificationStatistics.o"
 	@echo "... classificationStatistics.i"
 	@echo "... classificationStatistics.s"
