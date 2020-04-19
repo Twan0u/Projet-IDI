@@ -93,6 +93,7 @@ double percentage(int sum, int total){
 }
 
 /* Test de la fonction de pourcentage
+ * Cette méthode effectue des tests pour vérifier que la fonction pourcentage fonctionne toujours
  */
 int test_percentage(void){
     int error_counter = 0;
@@ -155,19 +156,19 @@ void displayResultsForEachClasses(int *realClasses, int *estimateClasses){
  *
  *  @param realClasses est un vecteur de classes concrètes
  *  @param estimateClasses est un vecteur de classes estimées par le programme
- *  @param TODO
+ *  @param sizeOfRealClasses est la taille du vecteur realClasses
  *
  *  @return void
  */
 void displayAccuracy(int *realClasses, int *estimateClasses, int sizeOfRealClasses){
-    int errors;
+    int errors = 0;
     for(int i=0;i<sizeOfRealClasses;i++){
         if (realClasses[i]!=estimateClasses[i]){
             errors++;
         }
     }
-    int accuracy = (errors*100)/sizeOfRealClasses;
-    printf("%d %%",accuracy); // affichage avec 2 virgules TODO
+    double accuracy = 100-((errors*100)/sizeOfRealClasses);
+    printf("L'accuracy est de %.2f%%\n",accuracy);
 }
 
 /* 	crée un graphique à bars (cfr interface 2 - document de projet)
