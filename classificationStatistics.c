@@ -6,6 +6,12 @@
 #include "dao.h"
 #include "UnitTest.h"
 
+//Contient le taille de l'unité de base pour le diagramme en batonnets
+#define MAX_SIZE_BAR 52
+
+#define LINE {printf("\n");}
+
+
 /* Contiens un tableau de classes et la taille de ce tableau
  *
  * vector est un tableau contenant des entiers
@@ -35,7 +41,7 @@ void sizeUpArray(int* oldArray,int* newArray, int sizeOldArray){
  * @param newItem est le nouvel élément à ajouter à classes
  *
  * @return la structure classes entrée en paramètre d'entrée à laquelle on doit ou non ajouter newItem si celui-ci n'était pas déjà présent. cette structure aura son compteur size augmenté de 1 si un élément à été ajouté
- * */
+ * *//*
 Classes addWithoutDuplicateClasses(Classes classes, int newItem){
     if (classes.size==0){ // si le tableau est vide
         classes.size = 1;
@@ -71,7 +77,7 @@ Classes researchClasses(int* realClasses, int realClassesSize){
     output.size=0;
     // Itération sur chaque élément de realClasses et Ajout sans doublons à la structure
     for(int i = 0; i<realClassesSize; i++){
-        output= addWithoutDuplicateClasses(output,realClasses[i]);
+       // output= addWithoutDuplicateClasses(output,realClasses[i]);
     }
    // Retourner la structure sans doublons
     return output;
@@ -137,7 +143,7 @@ int test_compare(void){
  *  @return un tableau d'entier de même taille que realClasses qui contiens un 0 quand les 2 éléments du tableau sont identiques et autre chose quand ils sont différents
  */
 int *compareVectors(int *realClasses, int *estimateClasses){
-    //int out[1];
+    int out[1];
     return realClasses;
 }
 
@@ -147,8 +153,13 @@ int *compareVectors(int *realClasses, int *estimateClasses){
  *
  *  @return void
  */
-void displayResultsForEachClasses(int *realClasses, int *estimateClasses){
-
+void displayResultsForEachClasses(int *classes, int nbClasses, int *realClasses, int *estimateClasses)
+{
+    printf("classe          |   bien classe   |   total   |    Pourcentage");LINE;
+    for(int i=0;i<nbClasses; i++)
+    {
+        printf("%4d            |%5d            |%5d      |       %d",classes[i],estimateClasses[i],realClasses[i]+estimateClasses[i],i);LINE;
+    }
 }
 
 /* 	Affiche la précision de l'estimation faite par estimateClasses sur le vecteur realclasses et l'affiche sous la forme suivante "L’accuracy est de XX%".
@@ -158,16 +169,86 @@ void displayResultsForEachClasses(int *realClasses, int *estimateClasses){
  *
  *  @return void
  */
-void displayAccuracy(int *realclasses, int *estimateClasses){
+void displayAccuracy(int *realClasses, int *estimateClasses){
 
+}
+
+/*crée une barre de longueur donnée
+ *@params void
+ *@return void
+ */
+void displayBar(int size)
+{
+    for (int i=0;i<size;i++)
+    {
+        printf("__");
+    }
+}
+/* crée une échelle absolues pour le graphique à barre
+ * @params void
+ * @return void
+ */
+void displayScaleAbsoluteValue()
+{
+    printf("   ");
+    for(int i = 1; i < MAX_SIZE_BAR; i++)// réalise la première ligne de l'échelle
+    {
+        printf(" ");
+        if (i<=2 || (i!=0 && i%10==0))
+            printf("%d",i);
+        else if (i%10!=1) printf(" ");
+    }
+   LINE;
+    printf("___");
+    for(int i = 1; i < MAX_SIZE_BAR; i++)// réalise la deuxième ligne de l'échelle
+    {
+        printf("_");
+        if (i<=2 || (i!=0 && i%10==0))
+            printf("|");
+        else printf("_");
+    }
+    LINE;
+    for(int i =0;i<3;i++)
+    {
+        printf("  |");
+        LINE;
+    }
 }
 
 /* 	crée un graphique à bars (cfr interface 2 - document de projet)
  *  @params TODO
  *  @return void
  */
-void displayBarChart(){
-
+void displayBarChart(int *classes, int nbClasses, int * bienClasse, int *malClasse)
+{
+    printf("Legende : \n"
+           "T : Total\n"
+           "N : Nombre de bien classe\n"
+           "P : nombre de pas correctement classe\n\n\n");
+    displayScaleAbsoluteValue();
+    for(int i =0; i<nbClasses; i++)
+    {
+        printf(" P|");
+        displayBar(bienClasse[i]);
+        LINE;
+        printf("%iN|",classes[i]);
+        displayBar(malClasse[i]);
+        LINE;
+        printf(" T|");
+        displayBar(bienClasse[i]+malClasse[i]);
+        LINE;
+        printf("  |");
+        LINE;
+    }
+}
+void test_display()
+{
+    int testClasses[]={2,3,4};
+    int testRealClasses[]={3,2,5};
+    int testEstimateClasses[]={3,0,2};
+    int testNbClasses = 3;
+    displayResultsForEachClasses(testClasses,testNbClasses,testRealClasses,testEstimateClasses);
+    displayBarChart(testClasses,testNbClasses,testRealClasses,testEstimateClasses);
 }
 
 void test_dao(){
@@ -178,5 +259,6 @@ void test_classificationStatistics(void){
     printf("Début - Test de classification Statistics :\n");
         printf("\tx Fonction compare : %d erreurs\n",test_compare());
         printf("\tx Fonction percentage : %d erreurs\n",test_percentage());
+        printf("\tx Fonction display \n"); test_display();
     printf("Fin - Test de classification Statistics :\n");
 }
