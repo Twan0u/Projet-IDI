@@ -155,11 +155,19 @@ void displayResultsForEachClasses(int *realClasses, int *estimateClasses){
  *
  *  @param realClasses est un vecteur de classes concrètes
  *  @param estimateClasses est un vecteur de classes estimées par le programme
+ *  @param TODO
  *
  *  @return void
  */
-void displayAccuracy(int *realclasses, int *estimateClasses){
-
+void displayAccuracy(int *realClasses, int *estimateClasses, int sizeOfRealClasses){
+    int errors;
+    for(int i=0;i<sizeOfRealClasses;i++){
+        if (realClasses[i]!=estimateClasses[i]){
+            errors++;
+        }
+    }
+    int accuracy = (errors*100)/sizeOfRealClasses;
+    printf("%d %%",accuracy); // affichage avec 2 virgules TODO
 }
 
 /* 	crée un graphique à bars (cfr interface 2 - document de projet)
