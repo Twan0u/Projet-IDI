@@ -23,7 +23,7 @@ void displayResultsForEachClasses(int *realClasses, int *estimateClasses);
  *
  *  @return void
  */
-void displayAccuracy(int *realClasses, int *estimateClasses, int sizeOfRealClasses);
+void displayAccuracy(int *realclasses, int *estimateClasses);
 
 /* 	crée un graphique à bars (cfr interface 2 - document de projet)
  *  @params TODO

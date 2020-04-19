@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/UnitTest.h
+stdbool.h
+-
+
+C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/classificationStatistics.c
+classificationStatistics.h
+C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/classificationStatistics.h
+dao.h
+C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/dao.h
+UnitTest.h
+C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/UnitTest.h
+
+C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/classificationStatistics.h
+dao.h
+C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/dao.h
+
+C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/dao.h
+stdio.h
+-
+
