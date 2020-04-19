@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/DAO.dir/dao.c.o  -o DAO 

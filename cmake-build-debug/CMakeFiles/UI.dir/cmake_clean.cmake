@@ -1,11 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/UI.dir/UI.c.o"
-  "CMakeFiles/UI.dir/classificationStatistics.c.o"
-  "CMakeFiles/UI.dir/interfacelib.c.o"
-  "CMakeFiles/UI.dir/dao.c.o"
-  "CMakeFiles/UI.dir/UnitTest.c.o"
+  "CMakeFiles/UI.dir/UI.c.obj"
+  "CMakeFiles/UI.dir/UnitTest.c.obj"
+  "CMakeFiles/UI.dir/classificationStatistics.c.obj"
+  "CMakeFiles/UI.dir/dao.c.obj"
+  "CMakeFiles/UI.dir/interfacelib.c.obj"
+  "UI.exe"
+  "UI.exe.manifest"
+  "UI.lib"
   "UI.pdb"
-  "UI"
 )
 
 # Per-language clean rules from dependency scanning.

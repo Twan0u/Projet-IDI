@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/UI.dir/UI.c.o CMakeFiles/UI.dir/classificationStatistics.c.o CMakeFiles/UI.dir/interfacelib.c.o CMakeFiles/UI.dir/dao.c.o CMakeFiles/UI.dir/UnitTest.c.o  -o UI 

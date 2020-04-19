@@ -4,108 +4,112 @@
 	<Project>
 		<Option title="IDI"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="gcc"/>
+		<Option compiler="msvc8"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="UI">
-				<Option output="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/UI" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug"/>
+				<Option output="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug/UI.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 UI"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 UI"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="UI/fast">
-				<Option output="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/UI" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug"/>
+				<Option output="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug/UI.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 UI/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 UI/fast"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Arnaud Cassart\Documents\Travail Arnaud\Analyse num\Projet-IDI\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UI.c">
+		<Unit filename="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/UI.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.c">
+		<Unit filename="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/UnitTest.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.h">
+		<Unit filename="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/UnitTest.h">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.c">
+		<Unit filename="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/classificationStatistics.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h">
+		<Unit filename="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/classificationStatistics.h">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.c">
+		<Unit filename="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/dao.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h">
+		<Unit filename="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/dao.h">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.c">
+		<Unit filename="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/interfacelib.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h">
+		<Unit filename="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/interfacelib.h">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/CMakeLists.txt">
+		<Unit filename="C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
