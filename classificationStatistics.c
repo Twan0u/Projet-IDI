@@ -17,14 +17,64 @@ struct Classes {
     int *vector;
     int size;
 };
+/* Prends le tableau oldArray et le copie dans un nouveau tableau qui mesure une unité de plus que oldArray
+ *
+ * @param oldArray ancien tableau que l'on souhaite agrandir et copier
+ * @param newArray nouveau tableau de taille sizeOldArray +1 dans lequel on va copier les données de l'ancien
+ * @param sizeOldArray taille de l'ancien tableau oldArray
+ *
+ */
+void sizeUpArray(int* oldArray,int* newArray, int sizeOldArray){
+    for(int i=0;i<sizeOldArray;i++)
+        newArray[i] = oldArray[i];
+}
+
+/* Ajoute à la structure Classes un élément si celui-ci n'existe pas déjà dedans. Cette fonction incrémentera ensuite le compteur de classes de 1 si elle à ajouté un élément
+ *
+ * @param classes est une structure contenant un tableau et la taille de celui-ci. Il est utilisé pour stocker les différentes classes individuellement différentes
+ * @param newItem est le nouvel élément à ajouter à classes
+ *
+ * @return la structure classes entrée en paramètre d'entrée à laquelle on doit ou non ajouter newItem si celui-ci n'était pas déjà présent. cette structure aura son compteur size augmenté de 1 si un élément à été ajouté
+ * */
+Classes addWithoutDuplicateClasses(Classes classes, int newItem){
+    if (classes.size==0){ // si le tableau est vide
+        classes.size = 1;
+        int newArray[] ={newItem};
+        classes.vector = newArray;
+        return classes;
+    }else{// si le tableau n'est pas vide
+        for(int i=0; i< classes.size;i++){ // recherche dans tous les éléments de la structure
+            if(classes.vector[i]==newItem){// Le nouvel élément existe-il déjà ?
+                return classes; // Oui
+            }
+        }
+        // Le nouvel élément n'existe pas encore
+        int newArray[classes.size+1];
+        sizeUpArray(classes.vector, newArray, classes.size); // on agrandit la taille du tableau de 1 unité
+        classes.vector = newArray;
+        classes.vector[classes.size] = newItem;//ajout du nouvel élément dans le tableau
+        classes.size = classes.size+1;
+        return classes;
+    }
+
+}
 
 /* 	Crée un tableau reprenant les classes différentes que contiens realClasses et supprime les doublons.
+ *
  *  @param realClasses est un vecteur contenant de une série de classes
+ *
  *  @return une structure de donnée contenant un tableau avec les classes individuellement différentes et le nombre total de classes individuellement différentes disponibles.
  */
-Classes researchClasses(int *realClasses){
+Classes researchClasses(int* realClasses, int realClassesSize){
+    // Création de la structure de retour
     Classes output;
-     return output;
+    output.size=0;
+    // Itération sur chaque élément de realClasses et Ajout sans doublons à la structure
+    for(int i = 0; i<realClassesSize; i++){
+        output= addWithoutDuplicateClasses(output,realClasses[i]);
+    }
+   // Retourner la structure sans doublons
+    return output;
 }
 
 /* retourne le calcul d'un pourcentage de ( sum / total ) * 100
@@ -87,8 +137,8 @@ int test_compare(void){
  *  @return un tableau d'entier de même taille que realClasses qui contiens un 0 quand les 2 éléments du tableau sont identiques et autre chose quand ils sont différents
  */
 int *compareVectors(int *realClasses, int *estimateClasses){
-    int out[1];
-    return out;
+    //int out[1];
+    return realClasses;
 }
 
 /*  Affiche un tableau reprenant les différentes classes disponibles (cfr interface1 - document de projet), combien ont bien été classées dans estimateClasses, le nombre d'occurences de chaque classe dans vecteur realClasses et un pourcentage de classes qui ont bien été classées dans estimateClasses.
@@ -125,7 +175,6 @@ void test_dao(){
 }
 
 void test_classificationStatistics(void){
-    int error_count;//variable temporaire utilisée
     printf("Début - Test de classification Statistics :\n");
         printf("\tx Fonction compare : %d erreurs\n",test_compare());
         printf("\tx Fonction percentage : %d erreurs\n",test_percentage());
