@@ -41,7 +41,7 @@ void sizeUpArray(int* oldArray,int* newArray, int sizeOldArray){
  * @param newItem est le nouvel élément à ajouter à classes
  *
  * @return la structure classes entrée en paramètre d'entrée à laquelle on doit ou non ajouter newItem si celui-ci n'était pas déjà présent. cette structure aura son compteur size augmenté de 1 si un élément à été ajouté
- * *//*
+ * */
 Classes addWithoutDuplicateClasses(Classes classes, int newItem){
     if (classes.size==0){ // si le tableau est vide
         classes.size = 1;
@@ -77,9 +77,9 @@ Classes researchClasses(int* realClasses, int realClassesSize){
     output.size=0;
     // Itération sur chaque élément de realClasses et Ajout sans doublons à la structure
     for(int i = 0; i<realClassesSize; i++){
-       // output= addWithoutDuplicateClasses(output,realClasses[i]);
+        output= addWithoutDuplicateClasses(output,realClasses[i]);
     }
-   // Retourner la structure sans doublons
+    // Retourner la structure sans doublons
     return output;
 }
 
@@ -99,6 +99,7 @@ double percentage(int sum, int total){
 }
 
 /* Test de la fonction de pourcentage
+ * Cette méthode effectue des tests pour vérifier que la fonction pourcentage fonctionne toujours
  */
 int test_percentage(void){
     int error_counter = 0;
@@ -143,7 +144,7 @@ int test_compare(void){
  *  @return un tableau d'entier de même taille que realClasses qui contiens un 0 quand les 2 éléments du tableau sont identiques et autre chose quand ils sont différents
  */
 int *compareVectors(int *realClasses, int *estimateClasses){
-    int out[1];
+    //int out[1];
     return realClasses;
 }
 
@@ -166,11 +167,19 @@ void displayResultsForEachClasses(int *classes, int nbClasses, int *realClasses,
  *
  *  @param realClasses est un vecteur de classes concrètes
  *  @param estimateClasses est un vecteur de classes estimées par le programme
+ *  @param sizeOfRealClasses est la taille du vecteur realClasses
  *
  *  @return void
  */
-void displayAccuracy(int *realClasses, int *estimateClasses){
-
+void displayAccuracy(int *realClasses, int *estimateClasses, int sizeOfRealClasses){
+    int errors = 0;
+    for(int i=0;i<sizeOfRealClasses;i++){
+        if (realClasses[i]!=estimateClasses[i]){
+            errors++;
+        }
+    }
+    double accuracy = 100-((errors*100)/sizeOfRealClasses);
+    printf("L'accuracy est de %.2f%%\n",accuracy);
 }
 
 /*crée une barre de longueur donnée

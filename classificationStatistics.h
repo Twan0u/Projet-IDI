@@ -14,22 +14,23 @@ void test_dao();
  *
  *  @return void
  */
-void displayResultsForEachClasses(int *realClasses, int *estimateClasses);
+void displayResultsForEachClasses(int *classes, int nbClasses, int *realClasses, int *estimateClasses);
 
 /* 	Affiche la précision de l'estimation faite par estimateClasses sur le vecteur realclasses et l'affiche sous la forme suivante "L’accuracy est de XX%".
  *
  *  @param realClasses est un vecteur de classes concrètes
  *  @param estimateClasses est un vecteur de classes estimées par le programme
+ *  @param sizeOfRealClasses est la taille du vecteur realClasses
  *
  *  @return void
  */
-void displayAccuracy(int *realclasses, int *estimateClasses);
+void displayAccuracy(int *realClasses, int *estimateClasses, int sizeOfRealClasses);
 
 /* 	crée un graphique à bars (cfr interface 2 - document de projet)
  *  @params TODO
  *  @return void
  */
-void displayBarChart();
+void displayBarChart(int *classes, int nbClasses, int * bienClasse, int *malClasse);
 
 /* fonction générale de test de la librairie
  *
