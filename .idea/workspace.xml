@@ -12,12 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65316dcf-19dc-42c0-bc47-d6ba18dab1c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classificationStatistics.c" beforeDir="false" afterPath="$PROJECT_DIR$/classificationStatistics.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-    </list>
+    <list default="true" id="65316dcf-19dc-42c0-bc47-d6ba18dab1c9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,10 +28,6 @@
         <option value="CMakeLists.txt" />
       </list>
     </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1ZLDGsrhiDXhoG7dtQj4sUucHWs" />
   <component name="ProjectViewState">
@@ -88,23 +79,6 @@
       </list>
     </option>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="65316dcf-19dc-42c0-bc47-d6ba18dab1c9" name="Default Changelist" comment="" />
-      <created>1587329204186</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1587329204186</updated>
-      <workItem from="1587329208803" duration="26000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Intentions" timestamp="1584610939084">
       <screen x="0" y="0" width="1280" height="680" />
@@ -142,14 +116,6 @@
     </state>
     <state width="595" height="473" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585659966740" />
     <state width="1237" height="226" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1587327247818" />
-    <state x="536" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1587329209039">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="536" y="329" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1587329209039" />
-    <state x="649" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587329220324">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="649" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1587329220324" />
     <state x="0" y="0" width="742" height="720" key="find.popup" timestamp="1587310175289">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
