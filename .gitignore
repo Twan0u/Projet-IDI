@@ -58,3 +58,4 @@ cmake-build-debug/UI
 *.o
 *.o
 cmake-build-debug/UI
+.idea/workspace.xml
