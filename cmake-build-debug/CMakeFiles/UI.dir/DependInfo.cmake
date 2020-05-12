@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/UI.c" "C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/UI.c.obj"
-  "C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/UnitTest.c" "C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/UnitTest.c.obj"
-  "C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/classificationStatistics.c" "C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/classificationStatistics.c.obj"
-  "C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/dao.c" "C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/dao.c.obj"
-  "C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/interfacelib.c" "C:/Users/Arnaud Cassart/Documents/Travail Arnaud/Analyse num/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/interfacelib.c.obj"
+  "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UI.c" "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/UI.c.o"
+  "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.c" "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/UnitTest.c.o"
+  "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.c" "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/classificationStatistics.c.o"
+  "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.c" "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/dao.c.o"
+  "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.c" "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/interfacelib.c.o"
   )
-set(CMAKE_C_COMPILER_ID "MSVC")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH

@@ -1,5 +1,5 @@
 //
-// Created by Antoine Lambert on 19-03-20.
+// Created by Antoine Lambert and Arnaud Cassart on 19-03-20.
 //
 
 #include "classificationStatistics.h"

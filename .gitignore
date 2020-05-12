@@ -53,7 +53,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-.idea/workspace.xml
+.idea/*
 cmake-build-debug/UI
 *.o
 *.o
@@ -63,4 +63,4 @@ cmake-build-debug/UI
 *.bin
 *.cmake
 cmake-build-debug/cmake_install.cmake
-cmake-build-debug/CMakeCache.txt
+cmake-build-debug/*
