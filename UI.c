@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "classificationStatistics.h"
 #include "interfacelib.h"
+#include "business.h"
 
 int main() {
     line();
@@ -20,11 +20,11 @@ int main() {
             break;
         case 2:
             printf("Début des tests\n");
-            line();
-                test_classificationStatistics();
-            line();
+            //line();
+            //    test_classificationStatistics();
+            //line();
                 test_dao();
-            line();
+            //line();
             break;
         default:
             printf("Choix incorrect\n");

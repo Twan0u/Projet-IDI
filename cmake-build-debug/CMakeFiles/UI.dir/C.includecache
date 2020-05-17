@@ -9,10 +9,10 @@
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UI.c
 stdio.h
 -
-classificationStatistics.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h
 interfacelib.h
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h
+business.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.h
 
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.c
 UnitTest.h
@@ -26,6 +26,20 @@ stdio.h
 stdbool.h
 -
 
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.c
+business.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.h
+math.h
+-
+
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.h
+dao.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
+stdio.h
+-
+math.h
+-
+
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.c
 classificationStatistics.h
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h
@@ -35,17 +49,27 @@ UnitTest.h
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.h
 
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h
-dao.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
 
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.c
 dao.h
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
 stdio.h
 -
+string.h
+-
+stdlib.h
+-
+dirent.h
+-
 
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
 stdio.h
+-
+string.h
+-
+stdlib.h
+-
+dirent.h
 -
 
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.c

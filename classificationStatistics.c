@@ -261,9 +261,6 @@ void test_display()
     displayBarChart(testClasses,testNbClasses,testRealClasses,testEstimateClasses);
 }
 
-void test_dao(){
-    test();
-}
 
 void test_classificationStatistics(void){
     printf("Début - Test de classification Statistics :\n");

@@ -4,9 +4,6 @@
 
 #ifndef IDI_CLASSIFICATIONSTATISTICS_H
 #define IDI_CLASSIFICATIONSTATISTICS_H
-#include "dao.h"
-
-void test_dao();
 
 /*  Affiche un tableau reprenant les différentes classes disponibles (cfr interface1 - document de projet), combien ont bien été classées dans estimateClasses, le nombre d'occurences de chaque classe dans vecteur realClasses et un pourcentage de classes qui ont bien été classées dans estimateClasses.
  *
@@ -14,6 +11,7 @@ void test_dao();
  *
  *  @return void
  */
+
 void displayResultsForEachClasses(int *classes, int nbClasses, int *realClasses, int *estimateClasses);
 
 /* 	Affiche la précision de l'estimation faite par estimateClasses sur le vecteur realclasses et l'affiche sous la forme suivante "L’accuracy est de XX%".
