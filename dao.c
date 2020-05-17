@@ -1,29 +1,10 @@
-
 #include "dao.h"
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <dirent.h>
 
-#define MAX_FILE_PATH_LENGTH 100
-#define MAX_DIRECTORY 15
-#define MAX_FILES_PER_DIR 24
-
-
-/**
- * Cette fonction transforme une chaine de charactères en un entier. si la chaine est nulle ou vide, cette fonction retourne 0.
- * @param input : chaine de charactères destinée à être convertie en nombre entier
- * @return une valeur entiere (int) si le nombre est correct, 0 si la chaine de charactère est nulle, vide ou invalide
- *
- * Cette fonction fait appel à la librairie <stdlib.h>
- **/
-int convert_to_int(char* input){
-    if (input==NULL){
-        return 0;
-    }
-    int output = atoi(input);
-    return output;
-}
 
 /**
  * Cette fonction transforme une chaine de charactères en un double. si la chaine est nulle ou vide, cette fonction retourne 0.
@@ -187,7 +168,6 @@ void dir_list(char* path, int max_number_of_directory, int max_number_of_files, 
                 char temp[max_number_of_files][MAX_FILE_PATH_LENGTH];
 
                 path_concatenation(path,dir->d_name,current_dir);
-                printf("%s",path);
                 file_list(current_dir,max_number_of_files,temp);
 
                 for (int j = 0; j<max_number_of_files; j++){
@@ -215,25 +195,3 @@ void activity_recogniser(char* path, char category[4]){
     category[4]='\0';
 }
 
-void test() {
-   /* char data[MAX_DIRECTORY][MAX_FILES_PER_DIR][MAX_FILE_PATH_LENGTH];
-
-    for (int i=0;i<MAX_DIRECTORY;i++){
-        for(int j=0;j<MAX_FILES_PER_DIR;j++){
-            data[i][j][0]= '\0';
-        }
-    }
-
-    dir_list("./data",MAX_DIRECTORY,MAX_FILES_PER_DIR,data);
-
-    for (int i=0;i<MAX_DIRECTORY;i++){
-        for(int j=0;j<MAX_FILES_PER_DIR;j++){
-            printf("%s --",data[i][j]);
-        }
-        printf("\n");
-    }
-
-    char category[4];
-    activity_recogniser(data[0][1],category);
-    printf("%s",category);*/
-}

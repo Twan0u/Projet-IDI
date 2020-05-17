@@ -9,7 +9,6 @@
 #include<string.h>
 #include<stdlib.h>
 #include <dirent.h>
-
 #define MAX_FILE_PATH_LENGTH 100
 #define MAX_DIRECTORY 15
 #define MAX_FILES_PER_DIR 24
@@ -43,4 +42,15 @@ void activity_recogniser(char* path, char category[4]);
  */
 void csv_file_reader(const char *pathname, int line_buffer_size, int coll_num, int line_num, double** output);
 
+
+/**
+ * enumere sous la forme d'un tableau a double entrees le nom des fichiers dans leur dossiers pour un path voulu. [dossier][fichier]
+ *
+ * @param path chemin racine pour tous les dossiers
+ * @param max_number_of_directory nombre maximum de dossiers à rechercher
+ * @param max_number_of_files nombre maximum de fichiers dans lesquels rechercher
+ * @param output tableau de sortie
+ * @todo
+ */
+void dir_list(char* path, int max_number_of_directory, int max_number_of_files, char output[max_number_of_directory][max_number_of_files][MAX_FILE_PATH_LENGTH]);
 #endif //IDI_DAO_H

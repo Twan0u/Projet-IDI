@@ -1,7 +1,7 @@
 //
 // Created by Antoine Lambert and Arnaud Cassart on 19-03-20.
 //
-
+/*
 #include "classificationStatistics.h"
 #include "dao.h"
 #include "UnitTest.h"
@@ -9,7 +9,7 @@
 //Contient le taille de l'unité de base pour le diagramme en batonnets
 #define MAX_SIZE_BAR 52
 
-#define LINE {printf("\n");}
+#define LINE printf("\n");*/
 
 
 /* Contiens un tableau de classes et la taille de ce tableau
@@ -18,22 +18,23 @@
  * size est la taille de ce tableau
  *
  */
+/*
 typedef struct Classes Classes;
 struct Classes {
     int *vector;
     int size;
-};
+};*/
 /* Prends le tableau oldArray et le copie dans un nouveau tableau qui mesure une unité de plus que oldArray
  *
  * @param oldArray ancien tableau que l'on souhaite agrandir et copier
  * @param newArray nouveau tableau de taille sizeOldArray +1 dans lequel on va copier les données de l'ancien
  * @param sizeOldArray taille de l'ancien tableau oldArray
  *
- */
+ *//*
 void sizeUpArray(int* oldArray,int* newArray, int sizeOldArray){
     for(int i=0;i<sizeOldArray;i++)
         newArray[i] = oldArray[i];
-}
+}*/
 
 /* Ajoute à la structure Classes un élément si celui-ci n'existe pas déjà dedans. Cette fonction incrémentera ensuite le compteur de classes de 1 si elle à ajouté un élément
  *
@@ -42,6 +43,7 @@ void sizeUpArray(int* oldArray,int* newArray, int sizeOldArray){
  *
  * @return la structure classes entrée en paramètre d'entrée à laquelle on doit ou non ajouter newItem si celui-ci n'était pas déjà présent. cette structure aura son compteur size augmenté de 1 si un élément à été ajouté
  * */
+/*
 Classes addWithoutDuplicateClasses(Classes classes, int newItem){
     if (classes.size==0){ // si le tableau est vide
         classes.size = 1;
@@ -63,14 +65,14 @@ Classes addWithoutDuplicateClasses(Classes classes, int newItem){
         return classes;
     }
 
-}
+}*/
 
 /* 	Crée un tableau reprenant les classes différentes que contiens realClasses et supprime les doublons.
  *
  *  @param realClasses est un vecteur contenant de une série de classes
  *
  *  @return une structure de donnée contenant un tableau avec les classes individuellement différentes et le nombre total de classes individuellement différentes disponibles.
- */
+ *//*
 Classes researchClasses(int* realClasses, int realClassesSize){
     // Création de la structure de retour
     Classes output;
@@ -81,7 +83,7 @@ Classes researchClasses(int* realClasses, int realClassesSize){
     }
     // Retourner la structure sans doublons
     return output;
-}
+}*/
 
 /* retourne le calcul d'un pourcentage de ( sum / total ) * 100
  *
@@ -89,26 +91,26 @@ Classes researchClasses(int* realClasses, int realClassesSize){
  * @param total est le nombre d'essais
  *
  * @return un pourcentage. Si sum est suppérieur à total, retourne 100.
- */
+ *//*
 double percentage(int sum, int total){
     if (sum < total){
         return ((double)sum/(double)total)*100;
     }else{
         return 100;
     }
-}
+}*/
 
 /* Test de la fonction de pourcentage
  * Cette méthode effectue des tests pour vérifier que la fonction pourcentage fonctionne toujours
  */
-int test_percentage(void){
+/*int test_percentage(void){
     int error_counter = 0;
     int* error_counter_ptr= &error_counter;
     error_assert(percentage(3300,10000) == 33.00,"simple de pourcentage",error_counter_ptr);
     error_assert(percentage(3333,10000) == 33.33,"pourcentage avec 2 nombres derrière la virgule ",error_counter_ptr);
     error_assert(percentage(1000,10) == 100,"sum suppérieur à total",error_counter_ptr);
     return error_counter;
-}
+}*/
 
 /*	Compare 2 entiers et vérifie que ceux-ci sont identiques
  *
@@ -117,13 +119,13 @@ int test_percentage(void){
  *
  *	@return 0 si les 2 éléments sont identiques et autre chose sinon
  */
-int compare(int firstElement, int secondElement){
+/*int compare(int firstElement, int secondElement){
     return firstElement-secondElement;
-}
+}*/
 
 /* Test sur la fonction compare()
  */
-int test_compare(void){
+/*int test_compare(void){
     int error_counter = 0;
     int* error_counter_ptr= &error_counter;
     error_assert(compare(1,1) == 0,"Comparaison de 2 nombres identiques",error_counter_ptr);
@@ -134,7 +136,7 @@ int test_compare(void){
     error_assert(compare(-4,8)!=0,"Comparaison entre 2 nombres différents dont un négatif",error_counter_ptr);
     error_assert(compare(-4,-16)!=0,"Comparaison entre 2 nombres négatif différents",error_counter_ptr);
     return error_counter;
-}
+}*/
 
 /*	Compare 2 vecteurs entre eux et retourne un tableau de taille identique au premier vecteur mis en paramètre. Si l'élément du tableau vaut 0, cela signifie que les 2 vecteurs ont le même contenu.
  *
@@ -143,10 +145,10 @@ int test_compare(void){
  *
  *  @return un tableau d'entier de même taille que realClasses qui contiens un 0 quand les 2 éléments du tableau sont identiques et autre chose quand ils sont différents
  */
-int *compareVectors(int *realClasses, int *estimateClasses){
+/*int *compareVectors(int *realClasses, int *estimateClasses){
     //int out[1];
     return realClasses;
-}
+}*/
 
 /*  Affiche un tableau reprenant les différentes classes disponibles (cfr interface1 - document de projet), combien ont bien été classées dans estimateClasses, le nombre d'occurences de chaque classe dans vecteur realClasses et un pourcentage de classes qui ont bien été classées dans estimateClasses.
  *
@@ -154,14 +156,14 @@ int *compareVectors(int *realClasses, int *estimateClasses){
  *
  *  @return void
  */
-void displayResultsForEachClasses(int *classes, int nbClasses, int *realClasses, int *estimateClasses)
+/*void displayResultsForEachClasses(int *classes, int nbClasses, int *realClasses, int *estimateClasses)
 {
     printf("classe          |   bien classe   |   total   |    Pourcentage");LINE;
     for(int i=0;i<nbClasses; i++)
     {
         printf("%4d            |%5d            |%5d      |       %d",classes[i],estimateClasses[i],realClasses[i]+estimateClasses[i],i);LINE;
     }
-}
+}*/
 
 /* 	Affiche la précision de l'estimation faite par estimateClasses sur le vecteur realclasses et l'affiche sous la forme suivante "L’accuracy est de XX%".
  *
@@ -171,7 +173,7 @@ void displayResultsForEachClasses(int *classes, int nbClasses, int *realClasses,
  *
  *  @return void
  */
-void displayAccuracy(int *realClasses, int *estimateClasses, int sizeOfRealClasses){
+/*void displayAccuracy(int *realClasses, int *estimateClasses, int sizeOfRealClasses){
     int errors = 0;
     for(int i=0;i<sizeOfRealClasses;i++){
         if (realClasses[i]!=estimateClasses[i]){
@@ -180,25 +182,25 @@ void displayAccuracy(int *realClasses, int *estimateClasses, int sizeOfRealClass
     }
     double accuracy = 100-((errors*100)/sizeOfRealClasses);
     printf("L'accuracy est de %.2f%%\n",accuracy);
-}
+}*/
 
 /*crée une barre de longueur donnée
  *@params void
  *@return void
  */
-void displayBar(int size)
+/*void displayBar(int size)
 {
     for (int i=0;i<size;i++)
     {
         printf("__");
     }
-}
+}*/
 /* crée une échelle absolues pour le graphique à barre
  * @params void
  * @return void
  */
 //test
-void displayScaleAbsoluteValue()
+/*void displayScaleAbsoluteValue()
 {
     printf("   ");
     for(int i = 1; i < MAX_SIZE_BAR; i++)// réalise la première ligne de l'échelle
@@ -229,6 +231,7 @@ void displayScaleAbsoluteValue()
  *  @params TODO
  *  @return void
  */
+/*
 void displayBarChart(int *classes, int nbClasses, int * bienClasse, int *malClasse)
 {
     printf("Legende : \n"
@@ -250,8 +253,8 @@ void displayBarChart(int *classes, int nbClasses, int * bienClasse, int *malClas
         printf("  |");
         LINE;
     }
-}
-void test_display()
+}*/
+/*void test_display()
 {
     int testClasses[]={2,3,4};
     int testRealClasses[]={3,2,5};
@@ -268,4 +271,4 @@ void test_classificationStatistics(void){
         printf("\tx Fonction percentage : %d erreurs\n",test_percentage());
         printf("\tx Fonction display \n"); test_display();
     printf("Fin - Test de classification Statistics :\n");
-}
+}*/

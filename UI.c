@@ -8,7 +8,7 @@ int main() {
     line();
     printf("Bonjour et bienvenue dans ce programme de reconnaissance d'activités.\n");
     printf("Veuillez choisir une  des propositions suivantes:\n");
-    printf("1: ...\n");
+    printf("1: Generer le modele\n");
     printf("2: Tester le programme\n");
     printf(">");
     int userInput;
@@ -16,7 +16,8 @@ int main() {
     switch (userInput)
     {
         case 1:
-            printf("Vous avez sélectionné 1.\n");
+            printf("Début de la génération du modele\n");
+            modele_generation();
             break;
         case 2:
             printf("Début des tests\n");

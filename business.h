@@ -12,7 +12,7 @@
 #define MAX_FILE_PATH_LENGTH 100
 #define MAX_DIRECTORY 15
 #define MAX_FILES_PER_DIR 24
-
+void modele_generation();
 void test_dao();
 
 #endif //IDI_BUSINESS_H
