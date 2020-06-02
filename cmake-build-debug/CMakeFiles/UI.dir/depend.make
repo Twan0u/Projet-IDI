@@ -12,6 +12,7 @@ CMakeFiles/UI.dir/UnitTest.c.o: ../UnitTest.h
 CMakeFiles/UI.dir/business.c.o: ../business.c
 CMakeFiles/UI.dir/business.c.o: ../business.h
 CMakeFiles/UI.dir/business.c.o: ../dao.h
+CMakeFiles/UI.dir/business.c.o: ../modele.h
 
 CMakeFiles/UI.dir/classificationStatistics.c.o: ../UnitTest.h
 CMakeFiles/UI.dir/classificationStatistics.c.o: ../classificationStatistics.c
@@ -23,4 +24,7 @@ CMakeFiles/UI.dir/dao.c.o: ../dao.h
 
 CMakeFiles/UI.dir/interfacelib.c.o: ../interfacelib.c
 CMakeFiles/UI.dir/interfacelib.c.o: ../interfacelib.h
+
+CMakeFiles/UI.dir/modele.c.o: ../modele.c
+CMakeFiles/UI.dir/modele.c.o: ../modele.h
 

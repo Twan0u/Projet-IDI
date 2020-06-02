@@ -13,6 +13,7 @@ CMakeFiles/UI.dir/business.c.o
  /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.c
  /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.h
  /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
+ /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.h
 CMakeFiles/UI.dir/classificationStatistics.c.o
  /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.h
  /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.c
@@ -24,3 +25,6 @@ CMakeFiles/UI.dir/dao.c.o
 CMakeFiles/UI.dir/interfacelib.c.o
  /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.c
  /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h
+CMakeFiles/UI.dir/modele.c.o
+ /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.c
+ /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.h

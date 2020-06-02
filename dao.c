@@ -4,75 +4,146 @@
 #include <string.h>
 #include <stdlib.h>
 #include <dirent.h>
-
+#define MAX_LINE_BUFFER_SIZE 65000
 
 /**
- * Cette fonction transforme une chaine de charactères en un double. si la chaine est nulle ou vide, cette fonction retourne 0.
+ * Cette fonction transforme une chaine de charactères en un double.
+ *
  * @param input : chaine de charactères destinée à être convertie en nombre a virgule flotatnte (double)
  * @return une valeur réele (double) si le nombre est correct, 0 si la chaine de charactère est nulle, vide ou invalide
  *
- * Cette fonction fait appel à la librairie <stdlib.h>
+ * @see <stdlib.h>
+ *
+ * @note on considère que strtod est exécutée en O(1)
+ *
+ * Complexité temporelle : O(1)
+ * Complexité memoire : O(1)
+ *
  **/
-double convert_to_double(char* input){
-    if (input==NULL){
-        return 0;
+double convert_string_to_double(char* input) {
+    if (input == NULL) {
+        return 0.0;
     }
-    double output = strtod(input,NULL);
-    return output;
+    return strtod(input, NULL);
 }
 
 /**
- * Cette fonction permets de transformer une ligne de charactères issu d'un fichier csv en un tableau de doubles
+ * Cette fonction permets de transformer une ligne(String) issue d'un fichier csv (ou chaque élément est séparé par une virgule) en un tableau de Réels
  *
  * @param line chaine de caractère correspondant à une ligne d'un fichier csv (les éléments sont des nombres réels séparés entre eux par des virgules)
- * @param output_length taille du tableau à renvoyer
- * @param output tableau de nombres réels utilisés pour renvoyer le résultat de la fonction
+ * @param output_length taille du tableau à renvoyer (nombre d'éléments à récupérer au sein de la ligne)
+ * @param output tableau de nombres réels utilisés pour renvoyer le résultat de la fonction (taille: output_length)
  *
- * Cette fonction fait appel à la librairie <string.h>
+ * @see <string.h>
+ *
+ * @note fait appel à la fonction convert_string_to_double
+ *
+ * Complexité temporelle : O(n)
+ * Complexité memoire : O(n)
+ *
  */
 void csv_line_spliter(char* line,int output_length, double* output){
     char* next_token = NULL;
-    for(int i=0;i<output_length;i++){
-        output[i]=(double) convert_to_double(strtok_r(line,",",&next_token));
+    for(int i=0; i<output_length ;i++){
+        output[i] = convert_string_to_double(strtok_r(line,",",&next_token));
         line=next_token;
     }
 }
 
 /**
- * Cette fonction permets de récupérer des nombres réels contenus dans un fichier csv et de les transcrire sous la forme d'un tableau.
+ * Cette fonction permets de récupérer des nombres réels contenus dans un fichier csv et de les transcrire sous la forme d'un tableau de réels.
  *
- * @param pathname chemin d'acces au fichier que l'on veut lire
- * @param line_buffer_size taille allouée à la chaine de caractère pour contenir une ligne du fichier
+ * @note important : la première ligne du fichier csv n'est pas prise en compte (Elle est réservée aux nom des catégories des données du fichier)
+ * @note la taille maximale du nombre de lettres contenues dans une ligne d'un fichier lue ne doit pas dépasser la variable MAX_LINE_BUFFER_SIZE
+ *
+ * @param pathname chemin d'acces au fichier csv que l'on veut lire
  * @param coll_num nombre de colonnes dans le tableau de sortie
  * @param line_num nombre de lignes dans le tableau de sortie
  * @param output tableau contenant les données du tableau à l'exception du nom des colonnes
+ * @return un code d'erreur expliquée ci-dessous
  *
- * Cette fonction fait appel à la librairie <stdio.h>
+ * Les Codes D'Erreur :
+ *      * 0 est retourné en cas de réussite du programme
+ *      * 1 signifie que le programme n'est pas parvenu à ouvir correctement le fichier
+ *
+ * @see <stdio.h>
+ * @see MAX_LINE_BUFFER_SIZE
+ *
+ * @note fait appel à la fonction csv_line_spliter
+ *
+ * Complexité temporelle : O(n)
+ * Complexité memoire : O(n)
+ *
  */
-void csv_file_reader(const char *pathname, int line_buffer_size, int coll_num, int line_num, double** output){
-    FILE *fp = fopen(pathname, "r"); //ouverture du fichier
-
+int csv_file_reader(const char *pathname, int coll, int line, double** output){
+    /* ouverture du fichier*/
+    FILE *fp = fopen(pathname, "r");
     if (!fp){
-        fprintf(stderr, "Can't open file %s\n", pathname);
-        return;
+        return 1; // code erreur d'ouverture d'un fichier
     }
+    /*fin ouverture du fichier*/
 
-    char buf[line_buffer_size];
+    //todo Créer une erreur en cas de taille de ligne d'un fichier trop grande pour le buffer de taille MAX_LINE_BUFFER_SIZE
+
+    char buf[MAX_LINE_BUFFER_SIZE]; //tableau de caractères représentant une ligne d'un fichier
+
     int line_count = 0;
+    fgets(buf, MAX_LINE_BUFFER_SIZE, fp); // ignore la première ligne d'un fichier (titre des colonnes)
 
-    while (fgets(buf, line_buffer_size, fp) && (line_count < line_num)) {
-        if (line_count == 0) { // ligne contenant le titre des colonnes
-            line_count++;
-            continue;
-        }
-        csv_line_spliter(buf,coll_num,output[line_count-1]);
-
+    while (fgets(buf, MAX_LINE_BUFFER_SIZE, fp) && (line_count < line)) {
+        csv_line_spliter(buf,coll,output[line_count]);
         line_count++;
     }
-    fclose(fp);
+
+    fclose(fp); //fermeture du fichier
+    return 0; //code en cas de réussite
 }
 
+//todo idem que csv line spliter mais retire category en plus
+void csv_line_spliter2(char* line,int output_length, double* output, char* category){
+    char* next_token = NULL;
+    for(int i=0; i<output_length ;i++) {
+        output[i] = convert_string_to_double(strtok_r(line, ",", &next_token));
+        line = next_token;
+    }
+    strcpy(category,line);
+}
+
+// todo
+int csv_file_reader2(const char *pathname, int line_buffer_size, int coll, int line, double** output, char** category){
+    /* ouverture du fichier*/
+    FILE *fp = fopen(pathname, "r"); //ouverture du fichier
+    if (!fp){
+        return 1; // code erreur d'ouverture de fichier
+    }/*fin ouverture du fichier*/
+    //todo Créer une erreur en cas de taille de ligne d'un fichier trop grande pour le buffer de taille MAX_LINE_BUFFER_SIZE
+
+    char buf[line_buffer_size]; //tableau de charactères représentant une ligne d'un fichier
+
+    int line_count = 0;
+    fgets(buf, line_buffer_size, fp); // prends en compte la première ligne (titre des colonnes)
+    while (fgets(buf, line_buffer_size, fp) && (line_count < line)) {
+        csv_line_spliter2(buf,coll,output[line_count],category[line_count]);
+        line_count++;
+    }
+    fclose(fp); //fermeture du fichier
+    return 0;   //code en cas de réussite
+}
+
+
 /**
+ * todo
+ */
+void write_title_csv(char const *fileName,char const *title_coll){
+    FILE* file = fopen(fileName,"w");
+    if(file==NULL){
+        fprintf(stderr, "Can't write in file :  %s\n", fileName);
+        return;
+    }
+    fprintf(file,"%s\n", title_coll);
+    fclose(file);
+}
+/** todo
  * Cette fonction permets d'écrire dans un fichier .csv les informations contenues dans un tableau d'entiers plaçé en paramètre
  *
  * @param fileName Nom du fichier ou écire les données
@@ -83,19 +154,20 @@ void csv_file_reader(const char *pathname, int line_buffer_size, int coll_num, i
  *
  * Cette fonction fait appel à la librairie <stdio.h>
  */
-void write_csv(char const *fileName,char const *title_coll, int coll_num, int line_num,double intput[line_num][coll_num]){
-    FILE* file = fopen(fileName,"w");
+void write_csv(char const *fileName, int line_num,double intput[line_num], char category[4]){
+    FILE* file = fopen(fileName,"a");
+
     if(file==NULL){
         fprintf(stderr, "Can't write in file :  %s\n", fileName);
         return;
     }
-    fprintf(file,"%s\n", title_coll);
-    for(int i = 0;i<line_num;i++){
-        for(int j = 0;j<coll_num-1;j++){
-            fprintf(file,"%lf,", intput[i][j]);
-        }
-        fprintf(file,"%lf\n", intput[i][coll_num-1]);
+
+    int i=0;
+    while(i<line_num){
+            fprintf(file,"%lf,", intput[i]);
+            i++;
     }
+    fprintf(file,"%s\n", category);
     fclose(file);
 }
 

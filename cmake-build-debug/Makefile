@@ -285,6 +285,33 @@ interfacelib.c.s:
 	$(MAKE) -f CMakeFiles/UI.dir/build.make CMakeFiles/UI.dir/interfacelib.c.s
 .PHONY : interfacelib.c.s
 
+modele.o: modele.c.o
+
+.PHONY : modele.o
+
+# target to build an object file
+modele.c.o:
+	$(MAKE) -f CMakeFiles/UI.dir/build.make CMakeFiles/UI.dir/modele.c.o
+.PHONY : modele.c.o
+
+modele.i: modele.c.i
+
+.PHONY : modele.i
+
+# target to preprocess a source file
+modele.c.i:
+	$(MAKE) -f CMakeFiles/UI.dir/build.make CMakeFiles/UI.dir/modele.c.i
+.PHONY : modele.c.i
+
+modele.s: modele.c.s
+
+.PHONY : modele.s
+
+# target to generate assembly for a file
+modele.c.s:
+	$(MAKE) -f CMakeFiles/UI.dir/build.make CMakeFiles/UI.dir/modele.c.s
+.PHONY : modele.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -312,6 +339,9 @@ help:
 	@echo "... interfacelib.o"
 	@echo "... interfacelib.i"
 	@echo "... interfacelib.s"
+	@echo "... modele.o"
+	@echo "... modele.i"
+	@echo "... modele.s"
 .PHONY : help
 
 

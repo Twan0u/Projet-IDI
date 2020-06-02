@@ -34,9 +34,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -57,9 +54,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -115,6 +109,12 @@
 			<Option target="UI"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h">
+			<Option target="UI"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.c">
+			<Option target="UI"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.h">
 			<Option target="UI"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/CMakeLists.txt">

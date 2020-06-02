@@ -29,7 +29,13 @@ stdbool.h
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.c
 business.h
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.h
+modele.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.h
 math.h
+-
+stdio.h
+-
+stdlib.h
 -
 
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.h
@@ -81,4 +87,12 @@ stdio.h
 /mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h
 stdio.h
 -
+
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.c
+modele.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.h
+math.h
+-
+
+/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.h
 

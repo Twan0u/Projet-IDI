@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.c" "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/classificationStatistics.c.o"
   "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.c" "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/dao.c.o"
   "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.c" "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/interfacelib.c.o"
+  "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.c" "/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir/modele.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

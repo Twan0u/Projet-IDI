@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/UI.dir/dao.c.o"
   "CMakeFiles/UI.dir/UnitTest.c.o"
   "CMakeFiles/UI.dir/business.c.o"
+  "CMakeFiles/UI.dir/modele.c.o"
   "UI.pdb"
   "UI"
 )

@@ -3,65 +3,79 @@
 //
 
 #include "business.h"
+#include "modele.h"
 #include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define MAX_FILE_PATH_LENGTH 100
 #define MAX_DIRECTORY 15
 #define MAX_FILES_PER_DIR 24
+#define MAX_SIZE_NUM_IN_FILE 69
+//todo changer max size num in file
 
-/*fonction de mise à la puissance 2*/
-double pow2(double nombre){
-    return nombre*nombre;
-}
-
-/*fonction qui génère le modele*/
-double modele(double* data){
-    double val = pow2(data[10]) + pow2(data[11]) + pow2(data[12]);
-    return sqrt(val);
-}
-
-void file_modele_generation(const char* path){
-    int lines_max = 1000; //todo changer
-    int coll_max = 13; //todo changer
-
-    // Allocation de mémoire
-    double** data = (double**) calloc(lines_max, sizeof(double*));
-    if (data==NULL){
-        printf("pas assze de mémoire");
+/** Cette fonction
+ *
+ * @param path
+ * @param fichier_sortie
+ * @param lines_max
+ * @param coll_max
+ * @param index_in_file index à indiquer comme premier élément de chaque ligne dans le fichier de sortie
+ * @param category dernier élément de chaque ligne dans le fichier de sortie
+ * @return code erreur qui décrit comment la fonction s'est terminée
+ *
+ * Erreurs :
+ *      * 0 Tout c'est terminé correctement
+ *      * 1 Il y a eu un problème lors de l'attribution de mémoire (pas assez de mémoire disponible)
+ *      * 2 Il y a eu un problème lors de l'ouverture du fichier à l'adresse path
+ */
+int file_modele_generation(const char* path,const char* fichier_sortie,int lines_max,int coll_max, double index_in_file, char category[4]){
+    /* Début : Allocation de mémoire */
+    double** data_from_file = (double**) calloc(lines_max, sizeof(double*));//data_from_file représente les données contenues dans le fichier à l'adresse path
+    if (data_from_file==NULL){
+        return 1; //erreur mémoire faible
     }
-    for(int i=0;i<lines_max;i++){
-        data[i] = (double*) calloc (coll_max,sizeof(double));
-        if (data[i]==NULL){
-            printf("pas assze de mémoire - %d", i);
-        }
-    }//fin allocation mémoire
-
-
-    csv_file_reader(path, 2048, coll_max, lines_max, data);//TODO bufferline size
-
-    for(int i=0;i<lines_max;i++){ // pour chaque ligne du tableau
-        // génération du test file
-        if((i%10)==0){//todo possibilite de changer la frequence
-            // 1/10 des données dans un fichier data_test.csv
-            //print la ligne dans le test set
-        }else{
-            //todo calculer le modele
-            //todo mettre ces données dans un tableau
-            //todo mettre ce tableau dans un fichier (modele.csv)
-            printf("%lf",modele(data[i]));
-            printf("\n");
+    for (int i=0;i<lines_max;i++){
+        data_from_file[i] = (double*) calloc(coll_max, sizeof(double));
+        if (data_from_file[i]==NULL){
+            return 1; //erreur mémoire faible
         }
     }
+    /* fin :  allocation mémoire */
+
+    int csv_return_code = csv_file_reader(path, coll_max, lines_max, data_from_file);//TODO bufferline size (à augmenter pour permettre un traitement de fichiers plus grands) ( ici 2048 caractères)
+
+    if(csv_return_code == 1){//code erreur en cas de problème à l'ouverture du fichier renvoyé par csv_file_reader
+        return 2; // code erreur en cas d'imposibilité d'ouvrir le fichier
+    }
+
+    double buffer[lines_max+1]; // le +1 est utilisé pour comptabiliser la colonne index en début
+    buffer[0]= index_in_file;
+
+    for(int i=0;i<lines_max;i++){ // pour chaque ligne d'un fichier
+        buffer[i+1]= modele_set(data_from_file[i]);
+    }
+
+    //todo error codes
+    write_csv(fichier_sortie,lines_max,buffer,category);
 
     // Libération de la mémoire
-    for(int i=0;i<lines_max;i++){
-        free(data[i]);
+    for (int i=0;i<lines_max;i++){
+        free(data_from_file[i]);
     }
-    free(data);
+    free(data_from_file);
     // FIN - Libération de la mémoire
 }
 
 void modele_generation(){
+
+    char* nom_fichier_entrainement = "train_set.csv";
+    char* nom_fichier_test = "test_set.csv";
+    int pourcentage_dans_testset  = 10; //pourcentage des données à mettre dans le testset
+    int trainvalue = 100/pourcentage_dans_testset;
+    int lines_max_to_read_in_file = 1000;
+    int coll_max_to_read_in_file = 13;
+
     // Charger tous les fichiers dans un tableau.
     char data[MAX_DIRECTORY][MAX_FILES_PER_DIR][MAX_FILE_PATH_LENGTH];
     for (int i=0;i<MAX_DIRECTORY;i++){
@@ -71,19 +85,68 @@ void modele_generation(){
     }
 
     dir_list("./data",MAX_DIRECTORY,MAX_FILES_PER_DIR,data);
-    char category[4];
+
+    write_title_csv(nom_fichier_entrainement,"index,Values...,Activity(ACT)");
+    write_title_csv(nom_fichier_test,"index,Values...,Activity(ACT)");
+
+    double index_in_out = 0;
+    double index_in_test = 0;
+    int filecount = 0;
+    char category[4]; //3 charactères du nom et '/0'
     for (int i=0;i<MAX_DIRECTORY;i++){
         category[0]='\0';
         activity_recogniser(data[i][1],category);
         printf("%s\n",category);
-        for(int j=0;j<MAX_FILES_PER_DIR;j++){
-            printf("%s --",data[i][j]);
-            //operation sur chaque fichier
-            file_modele_generation(data[i][j]);
+        for(int j=0;j<MAX_FILES_PER_DIR;j++) {
+            printf("%s --", data[i][j]);//si on veut afficher le nom du fichier a traiter
+            if(filecount % trainvalue == 0){
+                file_modele_generation(data[i][j], nom_fichier_test, lines_max_to_read_in_file, coll_max_to_read_in_file, index_in_test, category);
+                index_in_test++;
+            }
+            else{
+                file_modele_generation(data[i][j], nom_fichier_entrainement, lines_max_to_read_in_file, coll_max_to_read_in_file, index_in_out, category);//remettre 1000 et 13
+                //todo changer valeur fixes
+                //todo changer le nombres de colonnes dans les fichiers de départ
+                index_in_out++;
+            }
+            filecount++;
         }
         printf("\n");
     }
 }
-void test_dao(){
-    // useless
+
+
+void gen_mod(){
+    int line = 400; //lignes dans le fichier train_set //todo modifier en fonction du nombres de fichiers a analyser
+    int coll = 1000;//todo
+    //coll++;// todo il ne faut pas +1 ?
+    const char* train_set_path = "train_set.csv";
+
+    double** data = (double**) calloc(line, sizeof(double*));//todo verifier mémoire disponible
+    for(int i = 0; i<line;i++){
+        data[i] = (double*) calloc (coll, sizeof(double));
+    }
+
+
+char** category = (char**) calloc(line, sizeof(char*));// car il faut compter les 3 pour le mot et 1 pour le \0
+for (int i=0;i<line;i++){
+    category[i]= (char*) calloc(4,sizeof(char));
+}
+
+csv_file_reader2(train_set_path, 65000, coll, line, data, category);
+
+    for(int i = 0; i<line;i++){
+        printf("%s\n",category[i]);
+        for(int j=0;j<coll;j++){
+            printf("%lf__",data[i][j]);
+        }
+        printf("\n");
+    }
+
+
+}
+
+
+void test_dao(){//todo remove safely
+    gen_mod();
 }

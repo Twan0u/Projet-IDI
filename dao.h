@@ -9,11 +9,12 @@
 #include<string.h>
 #include<stdlib.h>
 #include <dirent.h>
+
 #define MAX_FILE_PATH_LENGTH 100
 #define MAX_DIRECTORY 15
 #define MAX_FILES_PER_DIR 24
 
-void test();
+void test();//todo remove securely
 
 void file_list(char* path_of_dir,int number_of_files_max, char output[number_of_files_max][MAX_FILE_PATH_LENGTH]);
 
@@ -29,19 +30,11 @@ void file_list(char* path_of_dir,int number_of_files_max, char output[number_of_
  */
 void activity_recogniser(char* path, char category[4]);
 
-/**
- * Cette fonction permets de récupérer des nombres réels contenus dans un fichier csv et de les transcrire sous la forme d'un tableau.
- *
- * @param pathname chemin d'acces au fichier que l'on veut lire
- * @param line_buffer_size taille allouée à la chaine de caractère pour contenir une ligne du fichier
- * @param coll_num nombre de colonnes dans le tableau de sortie
- * @param line_num nombre de lignes dans le tableau de sortie
- * @param output tableau contenant les données du tableau à l'exception du nom des colonnes
- *
- * Cette fonction fait appel à la librairie <stdio.h>
- */
-void csv_file_reader(const char *pathname, int line_buffer_size, int coll_num, int line_num, double** output);
+/**todo*/
+int csv_file_reader(const char *pathname, int coll, int line, double** output);
 
+/**todo*/
+int csv_file_reader2(const char *pathname, int line_buffer_size, int coll, int line, double** output, char** category);
 
 /**
  * enumere sous la forme d'un tableau a double entrees le nom des fichiers dans leur dossiers pour un path voulu. [dossier][fichier]
@@ -53,4 +46,21 @@ void csv_file_reader(const char *pathname, int line_buffer_size, int coll_num, i
  * @todo
  */
 void dir_list(char* path, int max_number_of_directory, int max_number_of_files, char output[max_number_of_directory][max_number_of_files][MAX_FILE_PATH_LENGTH]);
+
+/*todo*/
+void write_title_csv(char const *fileName,char const *title_coll);
+
+/** todo
+ * Cette fonction permets d'écrire dans un fichier .csv les informations contenues dans un tableau d'entiers plaçé en paramètre
+ *
+ * @param fileName Nom du fichier ou écire les données
+ * @param title_coll titre des colonnes du fichier csv (utile pour comprendre à quoi corespondent les données)
+ * @param coll_num nombre de colonnes du tableau contenant les données à inscrire
+ * @param line_num nombre de lignes du tableau contenant les données à inscrire
+ * @param intput tableau d'entier don't le contenu sera retranscri dans le fichier csv qui porte le nom filename
+ *
+ * Cette fonction fait appel à la librairie <stdio.h>
+ */
+void write_csv(char const *fileName, int line_num,double intput[line_num], char category[4]);
+
 #endif //IDI_DAO_H
