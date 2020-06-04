@@ -12,9 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65316dcf-19dc-42c0-bc47-d6ba18dab1c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business.c" beforeDir="false" afterPath="$PROJECT_DIR$/business.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business.h" beforeDir="false" afterPath="$PROJECT_DIR$/business.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classificationStatistics.c" beforeDir="false" afterPath="$PROJECT_DIR$/classificationStatistics.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591286240978</updated>
-      <workItem from="1591286242832" duration="3845000" />
+      <workItem from="1591286242832" duration="3976000" />
     </task>
     <task id="LOCAL-00001" summary="classificationStatistics.c terminé, a nettoyer">
       <created>1591286684107</created>
@@ -85,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591286684107</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="génération des patterns terminé">
+      <created>1591290161797</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591290161797</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,7 +97,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="classificationStatistics.c terminé, a nettoyer" />
-    <option name="LAST_COMMIT_MESSAGE" value="classificationStatistics.c terminé, a nettoyer" />
+    <MESSAGE value="génération des patterns terminé" />
+    <option name="LAST_COMMIT_MESSAGE" value="génération des patterns terminé" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Intentions" timestamp="1584610939084">
@@ -117,10 +122,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="396" y="65" key="#xdebugger.evaluate/0.0.1280.720/-1920.3.1920.1080@0.0.1280.720" timestamp="1590595222971" />
-    <state x="479" y="129" key="CommitChangelistDialog2" timestamp="1591286682759">
+    <state x="479" y="129" key="CommitChangelistDialog2" timestamp="1591290160747">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="479" y="129" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1591286682759" />
+    <state x="479" y="129" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1591290160747" />
     <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1585645391035">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -186,10 +191,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state width="925" height="367" key="XDebugger.FullValuePopup/0.0.1280.720/-1920.3.1920.1080@0.0.1280.720" timestamp="1590643629941" />
-    <state x="663" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591286607047">
+    <state x="663" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591290151867">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="663" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1591286607047" />
+    <state x="663" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1591290151867" />
     <state x="0" y="0" width="742" height="720" key="find.popup" timestamp="1587310175289">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
