@@ -5,6 +5,8 @@
 #ifndef IDI_CLASSIFICATIONSTATISTICS_H
 #define IDI_CLASSIFICATIONSTATISTICS_H
 
+#include "business.h"
+
 /*  Affiche un tableau reprenant les différentes classes disponibles (cfr interface1 - document de projet), combien ont bien été classées dans estimateClasses, le nombre d'occurences de chaque classe dans vecteur realClasses et un pourcentage de classes qui ont bien été classées dans estimateClasses.
  *
  *  @param realclasses est un vecteur de classes
@@ -12,7 +14,7 @@
  *  @return void
  */
 
-void displayResultsForEachClasses(int *classes, int nbClasses, int *realClasses, int *estimateClasses);
+void displayResultsForEachClasses(int* realClasses, int* estimateClasses, int nbRealClasse);
 
 /* 	Affiche la précision de l'estimation faite par estimateClasses sur le vecteur realclasses et l'affiche sous la forme suivante "L’accuracy est de XX%".
  *
@@ -28,7 +30,7 @@ void displayAccuracy(int *realClasses, int *estimateClasses, int sizeOfRealClass
  *  @params TODO
  *  @return void
  */
-void displayBarChart(int *classes, int nbClasses, int * bienClasse, int *malClasse);
+void displayBarChart(int* realClasses, int* estimateClasses, int nbRealClasse);
 
 /* fonction générale de test de la librairie
  *

@@ -1,3 +1,0 @@
-/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/cmake-build-debug/CMakeFiles/UI.dir
-/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/cmake-build-debug/CMakeFiles/edit_cache.dir
