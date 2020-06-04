@@ -16,26 +16,6 @@
       <change beforePath="$PROJECT_DIR$/business.c" beforeDir="false" afterPath="$PROJECT_DIR$/business.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business.h" beforeDir="false" afterPath="$PROJECT_DIR$/business.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classificationStatistics.c" beforeDir="false" afterPath="$PROJECT_DIR$/classificationStatistics.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classificationStatistics.h" beforeDir="false" afterPath="$PROJECT_DIR$/classificationStatistics.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/UI.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/UI.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/UI.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/UI.dir/classificationStatistics.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/UI.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/UI.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/UI.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/UI.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/UI.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,12 +76,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591286240978</updated>
-      <workItem from="1591286242832" duration="359000" />
+      <workItem from="1591286242832" duration="3845000" />
     </task>
+    <task id="LOCAL-00001" summary="classificationStatistics.c terminé, a nettoyer">
+      <created>1591286684107</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591286684107</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="classificationStatistics.c terminé, a nettoyer" />
+    <option name="LAST_COMMIT_MESSAGE" value="classificationStatistics.c terminé, a nettoyer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Intentions" timestamp="1584610939084">
@@ -125,6 +117,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="396" y="65" key="#xdebugger.evaluate/0.0.1280.720/-1920.3.1920.1080@0.0.1280.720" timestamp="1590595222971" />
+    <state x="479" y="129" key="CommitChangelistDialog2" timestamp="1591286682759">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="479" y="129" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1591286682759" />
     <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1585645391035">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -190,10 +186,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state width="925" height="367" key="XDebugger.FullValuePopup/0.0.1280.720/-1920.3.1920.1080@0.0.1280.720" timestamp="1590643629941" />
-    <state x="663" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591286313661">
+    <state x="663" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591286607047">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="663" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1591286313661" />
+    <state x="663" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1591286607047" />
     <state x="0" y="0" width="742" height="720" key="find.popup" timestamp="1587310175289">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

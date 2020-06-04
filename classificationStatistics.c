@@ -131,7 +131,7 @@ void compare(int* malClasse,int* realClasses,int* estimateClasses,int nbRealClas
 
 void generateClasses(double** classes, int* realClasses, int* estimateClasses, double** patterns, int nbRealClasse,char ** category)
 {
-    char cat[4];
+    char cat[MAX_LENGTH_CATEGORY];
     int realClasse = 0;
 
     realClasses= (int*) calloc(nbRealClasse,sizeof (int));
