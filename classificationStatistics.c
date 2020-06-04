@@ -224,6 +224,7 @@ void displayBarChart(int* realClasses, int* estimateClasses, int nbRealClasse)
         LINE;
     }
 }
+
 /*void test_display()
 {
     int testClasses[MAX_NB_PATTERN];// contient le nombre d'élément de chacune des classes
