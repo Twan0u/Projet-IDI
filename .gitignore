@@ -64,3 +64,5 @@ cmake-build-debug/UI
 *.cmake
 cmake-build-debug/cmake_install.cmake
 cmake-build-debug/*
+cmake-build-debug/CMakeFiles/Makefile.cmake
+*.cmake
