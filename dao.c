@@ -7,9 +7,9 @@
 #define MAX_LINE_BUFFER_SIZE 65000
 
 /**
- * Cette fonction transforme une chaine de charactères en un double.
+ * Cette fonction transforme une chaine de caractères en un double.
  *
- * @param input : chaine de charactères destinée à être convertie en nombre a virgule flotatnte (double)
+ * @param input : pointeur vers une chaine de charactères destinée à être convertie en nombre a virgule flotatnte (double)
  * @return une valeur réele (double) si le nombre est correct, 0 si la chaine de charactère est nulle, vide ou invalide
  *
  * @see <stdlib.h>
