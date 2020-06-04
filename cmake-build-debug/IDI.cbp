@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="UI">
-				<Option output="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/UI" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/cmake-build-debug/UI" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -41,15 +41,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 UI"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 UI"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="UI/fast">
-				<Option output="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug/UI" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/cmake-build-debug/UI" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -61,63 +61,63 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 UI/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 UI/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Antoine\ Lambert/Documents/Projet\ Ecole/Projet-IDI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UI.c">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/UI.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.c">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/UnitTest.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.h">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/UnitTest.h">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.c">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/business.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.h">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/business.h">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.c">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/classificationStatistics.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/classificationStatistics.h">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.c">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/dao.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/dao.h">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.c">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/interfacelib.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/interfacelib.h">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.c">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/modele.c">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.h">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/modele.h">
 			<Option target="UI"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/CMakeLists.txt">
+		<Unit filename="/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

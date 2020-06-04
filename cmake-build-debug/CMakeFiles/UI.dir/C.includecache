@@ -6,31 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UI.c
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/UI.c
 stdio.h
 -
 interfacelib.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/interfacelib.h
 business.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/business.h
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.c
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/UnitTest.c
 UnitTest.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/UnitTest.h
 stdbool.h
 -
 stdio.h
 -
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/UnitTest.h
 stdbool.h
 -
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.c
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/business.c
 business.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/business.h
 modele.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/modele.h
 math.h
 -
 stdio.h
@@ -38,27 +38,27 @@ stdio.h
 stdlib.h
 -
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/business.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/business.h
 dao.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/dao.h
 stdio.h
 -
 math.h
 -
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.c
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/classificationStatistics.c
 classificationStatistics.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/classificationStatistics.h
 dao.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/dao.h
 UnitTest.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/UnitTest.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/UnitTest.h
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/classificationStatistics.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/classificationStatistics.h
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.c
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/dao.c
 dao.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/dao.h
 stdio.h
 -
 string.h
@@ -68,7 +68,7 @@ stdlib.h
 dirent.h
 -
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/dao.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/dao.h
 stdio.h
 -
 string.h
@@ -78,21 +78,21 @@ stdlib.h
 dirent.h
 -
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.c
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/interfacelib.c
 interfacelib.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/interfacelib.h
 stdio.h
 -
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/interfacelib.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/interfacelib.h
 stdio.h
 -
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.c
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/modele.c
 modele.h
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/modele.h
 math.h
 -
 
-/mnt/c/Users/Antoine Lambert/Documents/Projet-IDI/modele.h
+/mnt/c/Users/Antoine Lambert/Documents/Projet Ecole/Projet-IDI/modele.h
 

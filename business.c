@@ -133,7 +133,7 @@ for (int i=0;i<line;i++){
     category[i]= (char*) calloc(4,sizeof(char));
 }
 
-csv_file_reader2(train_set_path, 65000, coll, line, data, category);
+csv_file_reader2(train_set_path, 65000, coll, line, data, category);//todo expliquer 6500000
 
     for(int i = 0; i<line;i++){
         printf("%s\n",category[i]);
