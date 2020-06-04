@@ -14,6 +14,43 @@
 #define MAX_SIZE_NUM_IN_FILE 69
 //todo changer max size num in file
 
+/**fonction qui génère la distance euclidienne entre des valeurs et un pattern
+ *@params valeurs contient un tableau de vecteur (1 entree)
+ *@params pattern contient un tableaux contenant tout les pattern (2 entree)
+ * renvoie un entier correspondant a au pattern avec la plus petite distance euclidienne
+ */
+int distanceEuclidienne(double* valeurs, double** patterns)
+{
+    double sommes[MAX_NB_PATTERN];
+    int line, minDistance;
+    int coll = 0;
+    double minVector = LONG_MAX; //valeur maximale pour un double/long
+    double valeur;
+
+    while (coll < MAX_VECTOR)
+    {
+        line = 0;
+        valeur = *(valeurs + coll);
+        while (line < MAX_NB_PATTERN)
+        {
+            sommes[line] = pow(valeur - *(*(patterns + line) + coll),2);//
+            line++;
+        }
+        coll++;
+    }
+    double results;
+    for (int i = 0; i < MAX_NB_PATTERN; i++)
+    {
+        results = sqrt(*(sommes + i));
+        if (minVector > results)
+        {
+            minVector = results;
+            minDistance = i;
+        }
+    }
+    return minDistance;
+}
+
 /** Cette fonction
  *
  * @param path
