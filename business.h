@@ -6,8 +6,11 @@
 #define IDI_BUSINESS_H
 
 #include "dao.h"
+#include "modele.h"
+
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 
 #define MAX_FILE_PATH_LENGTH 100
 #define MAX_DIRECTORY 15

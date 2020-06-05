@@ -1,17 +1,12 @@
-//
-// Created by Antoine Lambert on 16-05-20.
-//
 
 #include "business.h"
-//#include "modele.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
+
 
 #define MAX_FILE_PATH_LENGTH 100
 #define MAX_DIRECTORY 15
 #define MAX_FILES_PER_DIR 24
 #define MAX_SIZE_NUM_IN_FILE 69
+#define LONG_MAX 20000
 //todo changer max size num in file
 
 /**fonction qui génère la distance euclidienne entre des valeurs et un pattern
@@ -80,7 +75,7 @@ int file_modele_generation(const char* path, const char* fichier_sortie, int lin
     }
     /* fin :  allocation mémoire */
 
-    int csv_return_code = csv_file_reader(path, coll_max, lines_max, data_from_file);//TODO bufferline size (à augmenter pour permettre un traitement de fichiers plus grands) ( ici 2048 caractères)
+    int csv_return_code = csv_file_reader(path, coll_max, lines_max, data_from_file);
 
     if (csv_return_code == 1) {//code erreur en cas de problème à l'ouverture du fichier renvoyé par csv_file_reader
         return 2; // code erreur en cas d'imposibilité d'ouvrir le fichier
@@ -153,27 +148,30 @@ void modele_generation() {
 }
 
 
-void gen_mod(double ** pattern)
+//void gen_mod(double ** pattern)
+void gen_mod()
 {
     int line = 400; //lignes dans le fichier train_set //todo modifier en fonction du nombres de fichiers a analyser
     int coll = 1000;//todo
     //coll++;// todo il ne faut pas +1 ?
     const char* train_set_path = "train_set.csv";
     char cat[MAX_LENGTH_CATEGORY];
-    double somme[400];
+    double somme[coll];
     int iPattern, i, iter, nbLigne = 0;
 
-
-    for (iter = 0; i < coll; i++)somme[i] = 0;
+    iter=0;
+    for (i = 0; i < coll; i++) {
+        somme[i] = 0;
+    }
 
     double** data = (double**)calloc(line, sizeof(double*));//todo verifier mémoire disponible
     for (int i = 0; i < line; i++) {
         data[i] = (double*)calloc(coll, sizeof(double));
     }
 
-    double** patern = (double**)calloc(line, sizeof(double*));//todo verifier mémoire disponible
-    for (int i = 0; i < line; i++) {
-        pattern[i] = (double*)calloc(coll, sizeof(double));
+    double** pattern = (double**)calloc(line, sizeof(double*));//todo verifier mémoire disponible et outsourcer
+    for (int j = 0; j < line; j++) {
+        pattern[j] = (double*)calloc(coll, sizeof(double));
     }
 
     char** category = (char**)calloc(line, sizeof(char*));// car il faut compter les 3 pour le mot et 1 pour le \0
@@ -185,18 +183,16 @@ void gen_mod(double ** pattern)
 
     while (i < line)
     {
-        strcpy_s(cat, MAX_LENGTH_CATEGORY, *(category + i));
-
+        strcpy(cat, *(category + i));
         while (i < line && strcmp(cat, *(category + i)) == 0)
         {
             iter = 0;
-
             while (i < line && strcmp(cat, *(category + i)) == 0 && iter < coll)
             {
                 somme[iter] += **((data + iter) + i);
                 iter++;
             }
-            strcpy_s(cat, MAX_LENGTH_CATEGORY, *(category + i));
+            strcpy(cat, *(category + i));
             i++;
         }
 
@@ -207,10 +203,15 @@ void gen_mod(double ** pattern)
         nbLigne += i;
 
     }
+    for (int i = 0; i < line; i++) {
+        for (int j = 0; j < coll; j++) {
+            printf("%lf", pattern[i][j]);
+        }
+    }
 
 }
 
 
 void test_dao() {//todo remove safely
-    gen_mod();
+    gen_mod(NULL);
 }

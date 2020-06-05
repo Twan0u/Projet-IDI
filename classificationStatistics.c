@@ -72,7 +72,7 @@ void generateClasses(double** classes, int* realClasses, int* estimateClasses, d
     realClasses= (int*) calloc(nbRealClasse,sizeof (int));
     estimateClasses = (int*) calloc(nbRealClasse, sizeof(int));
 
-    strcpy_s(cat,sizeof(cat) ,*(category));
+    strcpy(cat,*(category));
     for (int i = 0; i < nbRealClasse; i++)
     {
         *(estimateClasses+i)= distanceEuclidienne(*(classes + i), patterns);
@@ -82,7 +82,7 @@ void generateClasses(double** classes, int* realClasses, int* estimateClasses, d
         }
         else
         {
-            strcpy_s(cat, sizeof(cat), *(category+i));
+            strcpy(cat, *(category+i));
         }
     }
 }
@@ -191,10 +191,11 @@ void displayScale(int scale)
 }
 
 /* 	crée un graphique à bars (cfr interface 2 - document de projet)
- *  @params TODO
+ *  @params realClasses
+ *  @params estimateClasses
+ *  @params nbRealClasse
  *  @return void
  */
-
 void displayBarChart(int* realClasses, int* estimateClasses, int nbRealClasse)
 {
     int malClasse[MAX_NB_PATTERN];// contient pour chacune des classes le nombre d'éléments mal classe
